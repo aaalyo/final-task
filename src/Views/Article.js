@@ -80,12 +80,12 @@ function Article() {
                         <div className="col-12 p-0 m-0 col-md-6 ">
                             <div className="row p-0 m-0  d-inline-flex">
                                 <div className="col p-0 m-0">
-                                    <img src={article.thumbnail} className="img-fluid" alt="artist"/>
+                                    <img src={article.thumbnail} className="img-fluid" alt="main photo"/>
                                 </div>
                             </div>
                             <div className="row  p-0 m-0 d-inline-flex">
                                 {article.images.map((image, index) => {
-                                    return <div key={index} className="col-4 p-0 m-0"><img className="img-fluid preview" src={image} alt="artist" /></div>
+                                    return <div key={index} className="col-4 p-0 m-0"><img className="img-fluid preview" src={image} alt={`photo ${index+1}`} /></div>
                                 })}
                             </div>
                         </div>
