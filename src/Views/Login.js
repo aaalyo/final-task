@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import Breadcrumb from '../Components/Breadcrumb';
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Login() {
 
@@ -18,7 +18,7 @@ function Login() {
     const [loggedIn, setLoggedIn] = useState('');
 
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
    
     const onSubmit = async (values, event) => {
@@ -27,6 +27,7 @@ function Login() {
         console.log(response)
         if (response.data.error === true) {
             alert("incorrect password");
+            setLoggedIn('');
         } else {
             setLoggedIn('You are logged in!');
             console.log(loggedIn)
