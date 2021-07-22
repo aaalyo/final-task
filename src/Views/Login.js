@@ -20,7 +20,7 @@ function Login() {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-   
+
     const onSubmit = async (values, event) => {
         event.preventDefault();
         const response = await axios.post('http://localhost:8070/username', values);
@@ -32,10 +32,7 @@ function Login() {
             setLoggedIn('You are logged in!');
             console.log(loggedIn)
         }
-
     }
-
-    // console.log(watch("username")); // watch input value by passing the name of it
 
     return (
         <div className=" mt-3 me-5 ms-5 container">
