@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
 import Breadcrumb from '../Components/Breadcrumb';
 import { format } from 'date-fns';
+import Page404 from "../Views/404Page";
 
 
 
@@ -48,7 +49,7 @@ function CategoryList({ categoryId }) {
 
     let content = <h5>Loading...</h5>
     if (!articles.loading && articles.items.length === 0) {
-        content = <h5>No articles added</h5>
+        content = <h5>No articles in this category</h5>
     } else if (!articles.loading) {
         const articlesElements = articles.items.map((article, index) => {
 
@@ -80,6 +81,9 @@ function CategoryList({ categoryId }) {
         content = (
             articlesElements
         )
+    } else {
+
+        content = <Page404/>;
     }
     const breadcrumbPaths = [
         {

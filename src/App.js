@@ -11,6 +11,7 @@ import './Assets/index.css'
 import Category from './Views/Category';
 import Login from './Views/Login';
 import AboutUs from './Views/AboutUs';
+import Page404 from './Views/404Page';
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
           </Route>
           <Route path='/about-us'>
             <AboutUs/>
+          </Route>
+          <Route>
+            <Page404/>
           </Route>
         </Switch>
         <Footer />

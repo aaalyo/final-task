@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Contacts from "../Components/ContactsTab";
-import Team from "../Components/TeamTab";
+import Contacts from "../Components/AboutUsPage/ContactsTab";
+import Team from "../Components/AboutUsPage/TeamTab";
 import Breadcrumb from '../Components/Breadcrumb';
 
 function AboutUs() {

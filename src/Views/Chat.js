@@ -1,7 +1,7 @@
 import Breadcrumb from '../Components/Breadcrumb';
 import '../Assets/index.css';
-import MessagesList from '../Components/MessagesList'
-import SendMessageForm from '../Components/SendMessageForm'
+import MessagesList from '../Components/ChatPage/MessagesList'
+import SendMessageForm from '../Components/ChatPage/SendMessageForm'
 
 function Chat({ counter, reloadTaskList }) {
     const breadcrumbPaths = [
